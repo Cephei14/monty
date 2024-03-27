@@ -37,13 +37,11 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct info_s - structure that contain informations
- * @line: the strings of every line inside the monty file
- * @data: it's the int data to be stored in the stack
- * @mfile: File descriptor
- * @av: it's the argv in main
- * Description: this structure is made to help handling
- * the args
+ * struct info_s - struct that contain informations about the monty file
+ * @line: the strings of each line inside the monty file
+ * @mfile: File descriptor of the monty file
+ * Description: this structure is made to help handling the insturctions
+ * inside the monty file
 */
 
 typedef struct info_s
