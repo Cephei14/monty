@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -20,7 +21,7 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-} montystack;
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -46,22 +47,16 @@ typedef struct instruction_s
 
 typedef struct info_s
 {
+        int n;
 	char *line;
-        int  filelen;
         char **file;
 	FILE *mfile;
 }  info_t;
 
-extern info_t info;
-
-char **readfromfile(info_t *data);
-char	*ft_strjoin(char *reserve, char *buffer);
-size_t	ft_strlen(char *s);
-char	*ft_strdup(char *s1);
-void	*ft_calloc(size_t count, size_t size);
-void	*ft_memset(void *b, int c, size_t len);
-char	**ft_split(char *s, char c);
-size_t	ft_strlcpy(char *dst,char *src, size_t dstsize);
-void	ft_bzero(void *s, size_t n);
+void readfromfile();
+void checkline(char *str);
+void s_push(stack_t **head, unsigned int counter);
+void s_pall(stack_t **head, unsigned int counter);
 
 #endif
+
