@@ -47,14 +47,21 @@ typedef struct instruction_s
 typedef struct info_s
 {
 	char *line;
+        int  filelen;
         char **file;
 	FILE *mfile;
 }  info_t;
 
 extern info_t info;
 
-char *readfromfile(char **file,FILE *fd);
+char **readfromfile(info_t *data);
 char	*ft_strjoin(char *reserve, char *buffer);
 size_t	ft_strlen(char *s);
+char	*ft_strdup(char *s1);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_memset(void *b, int c, size_t len);
+char	**ft_split(char *s, char c);
+size_t	ft_strlcpy(char *dst,char *src, size_t dstsize);
+void	ft_bzero(void *s, size_t n);
 
 #endif

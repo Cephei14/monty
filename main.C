@@ -39,19 +39,21 @@ char	*ft_strjoin(char *reserve, char *buffer)
 	return (new_reserve);
 }
 
-char *readfromfile(char **file,FILE *fd)
+char **readfromfile(info_t *data)
 {
 	char *onelinefile = NULL;
 	char str[1024];
+	data->filelen = 0;
 
 	
-	while(fgets(str,sizeof(str),fd) != NULL)
+	while(fgets(str,sizeof(str),data->mfile) != NULL)
 	{
 		onelinefile = ft_strjoin(onelinefile,str);
-		fgets(str,sizeof(str),fd);
+		data->filelen++;
 	}
-	printf("%s\n",onelinefile);
-	return(onelinefile);
+	data->file = ft_split(onelinefile,'\n');
+	free(onelinefile);
+	return (data->file);
 }
 int main(int ac, char **av)
 {
@@ -64,11 +66,13 @@ int main(int ac, char **av)
 	        data.mfile = fopen(av[1], "r");
 	        if (data.mfile == NULL)
 	                return 1;
-			readfromfile(data.file,data.mfile);
-	        // fgets(info.line, sizeof(info.line), info.mfile);
-	        // token = strtok(info.line, " ");
-	        // token = strtok(NULL, " ");
-        	// printf("%s\n",token);
+			data.file = readfromfile(&data);
+			int i = 0;
+			while(i < 6)
+			{
+				printf("%s\n",data.file[i]);
+				i++;
+			}
 	}
 	else
 		printf("USAGE: monty file");
