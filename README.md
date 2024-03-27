@@ -10,7 +10,7 @@ Work with Monty bytecode files
 
 -Monty Bytecode Files
 
-Monty bytecode files contain instructions for the Monty bytecode interpreter. Each instruction corresponds to a stack operation such as push or pop. You will need to implement the logic for each instruction in your C code.
+Monty bytecode files contain instructions for the Monty bytecode interpreter. Each instruction corresponds to a stack operation such as push or pop. We will implement the logic for each instruction in this C codes.
 
 -Further Considerations
 
