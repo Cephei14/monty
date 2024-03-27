@@ -20,7 +20,7 @@ typedef struct stack_s
         int n;
         struct stack_s *prev;
         struct stack_s *next;
-} stack_t;
+} montystack;
 
 /**
  * struct instruction_s - opcode and its function
@@ -47,9 +47,14 @@ typedef struct instruction_s
 typedef struct info_s
 {
 	char *line;
+        char **file;
 	FILE *mfile;
 }  info_t;
 
 extern info_t info;
+
+char *readfromfile(char **file,FILE *fd);
+char	*ft_strjoin(char *reserve, char *buffer);
+size_t	ft_strlen(char *s);
 
 #endif
