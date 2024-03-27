@@ -52,7 +52,4 @@ typedef struct info_s
 
 extern info_t info;
 
-void mopen(char *str);
-void mread(void);
-
 #endif
