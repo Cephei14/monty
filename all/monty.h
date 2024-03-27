@@ -52,7 +52,7 @@ typedef struct info_s
         char **file;
 	FILE *mfile;
 }  info_t;
-extern info_t data;
+
 void readfromfile();
 void checkline(char *str);
 void s_push(stack_t **head, unsigned int counter);

@@ -1,6 +1,6 @@
 #include "monty.h"
 
-info_t data;
+extern info_t data;
 
 int main(int ac, char **av)
 {
