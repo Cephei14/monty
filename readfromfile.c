@@ -16,6 +16,7 @@ void readfromfile(void)
 	{
 		oneline = ft_strdup(str);
 		checkline(oneline, &head);
+		free(oneline);
 		data.line++;
 	}
 }
