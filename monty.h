@@ -61,6 +61,7 @@ void p_error(int i, char *str, char *token);
 void p_error0(int i);
 int check_int(char *token);
 char *ft_strdup(const char *s1);
+void s_free(stack_t *head);
 void s_push(stack_t **head, unsigned int counter);
 void s_pall(stack_t **head, unsigned int counter);
 void s_pint(stack_t **head, unsigned int counter);

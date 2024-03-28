@@ -19,7 +19,7 @@ void readfromfile(void)
 		free(oneline);
 		data.line++;
 	}
-	free(head);
+	s_free(head);
 }
 
 /**
