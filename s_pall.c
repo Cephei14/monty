@@ -7,9 +7,9 @@
  * Return: nothing
 */
 
-void s_pall(mystack_t **head, unsigned int counter)
+void s_pall(stack_t **head, unsigned int counter)
 {
-	mystack_t *current = *head;
+	stack_t *current = *head;
 	(void)counter;
 
 	if (*head == NULL)

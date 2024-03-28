@@ -7,9 +7,9 @@
  * Return: nothing
 */
 
-void s_pstr(mystack_t **head, unsigned int counter)
+void s_pstr(stack_t **head, unsigned int counter)
 {
-	mystack_t *current = *head;
+	stack_t *current = *head;
 
 	(void)counter;
 	while (current)

@@ -7,10 +7,10 @@
  * Return: nothing
 */
 
-void s_swap(mystack_t **head, unsigned int counter)
+void s_swap(stack_t **head, unsigned int counter)
 {
-	mystack_t *top1 = *head;
-	mystack_t *top2 = top1->next;
+	stack_t *top1 = *head;
+	stack_t *top2 = top1->next;
 	int temp = top1->n;
 
 	(void)counter;

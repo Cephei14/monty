@@ -8,7 +8,7 @@
  * Return: nothing
 */
 
-void s_pchar(mystack_t **head, unsigned int counter)
+void s_pchar(stack_t **head, unsigned int counter)
 {
 	char c = (*head)->n;
 

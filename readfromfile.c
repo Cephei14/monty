@@ -7,7 +7,7 @@
 
 void readfromfile(void)
 {
-	mystack_t *head = NULL;
+	stack_t *head = NULL;
 	char *oneline = NULL;
 	char str[1024];
 

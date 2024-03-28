@@ -21,7 +21,7 @@ typedef struct stack_s
 	int n;
 	struct stack_s *prev;
 	struct stack_s *next;
-} mystack_t;
+} stack_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -34,7 +34,7 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 	char *opcode;
-	void (*f)(mystack_t **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -56,23 +56,23 @@ typedef struct info_s
 extern info_t data;
 
 void readfromfile(void);
-void checkline(char *str, mystack_t **head);
+void checkline(char *str, stack_t **head);
 void p_error(int i, char *str, char *token);
 void p_error0(int i);
 int check_int(char *token);
 char *ft_strdup(const char *s1);
-void s_push(mystack_t **head, unsigned int counter);
-void s_pall(mystack_t **head, unsigned int counter);
-void s_pint(mystack_t **head, unsigned int counter);
-void s_pop(mystack_t **head, unsigned int counter);
-void s_swap(mystack_t **head, unsigned int counter);
-void s_add(mystack_t **head, unsigned int counter);
-void s_nop(mystack_t **head, unsigned int counter);
-void s_sub(mystack_t **head, unsigned int counter);
-void s_div(mystack_t **head, unsigned int counter);
-void s_mul(mystack_t **head, unsigned int counter);
-void s_mod(mystack_t **head, unsigned int counter);
-void s_pchar(mystack_t **head, unsigned int counter);
-void s_pstr(mystack_t **head, unsigned int counter);
+void s_push(stack_t **head, unsigned int counter);
+void s_pall(stack_t **head, unsigned int counter);
+void s_pint(stack_t **head, unsigned int counter);
+void s_pop(stack_t **head, unsigned int counter);
+void s_swap(stack_t **head, unsigned int counter);
+void s_add(stack_t **head, unsigned int counter);
+void s_nop(stack_t **head, unsigned int counter);
+void s_sub(stack_t **head, unsigned int counter);
+void s_div(stack_t **head, unsigned int counter);
+void s_mul(stack_t **head, unsigned int counter);
+void s_mod(stack_t **head, unsigned int counter);
+void s_pchar(stack_t **head, unsigned int counter);
+void s_pstr(stack_t **head, unsigned int counter);
 
 #endif

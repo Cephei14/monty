@@ -7,9 +7,9 @@
  * Return: nothing
 */
 
-void s_pop(mystack_t **head, unsigned int counter)
+void s_pop(stack_t **head, unsigned int counter)
 {
-	mystack_t *current = (*head)->next;
+	stack_t *current = (*head)->next;
 	(void)counter;
 	if (*head == NULL)
 		p_error0(5);

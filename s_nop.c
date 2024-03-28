@@ -7,7 +7,7 @@
  * Return: nothing
 */
 
-void s_nop(mystack_t **head, unsigned int counter)
+void s_nop(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

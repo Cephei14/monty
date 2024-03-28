@@ -8,7 +8,7 @@
  * Return: Nothing
  */
 
-void checkline(char *str, mystack_t **head)
+void checkline(char *str, stack_t **head)
 {
 	char *token = NULL;
 	int i;

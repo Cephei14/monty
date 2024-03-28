@@ -7,9 +7,9 @@
  * Return: nothing
 */
 
-void s_push(mystack_t **head, unsigned int counter)
+void s_push(stack_t **head, unsigned int counter)
 {
-	mystack_t *new_node = (mystack_t *)malloc(sizeof(mystack_t));
+	stack_t *new_node = (stack_t *)malloc(sizeof(stack_t));
 	(void)counter;
 
 	if (new_node == NULL)
