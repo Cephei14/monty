@@ -44,3 +44,14 @@ char    *ft_strdup(const char *s1)
 	*(p + i) = 0;
 	return (p);
 }
+
+/**
+ * ft_isascii - function that check for ascii
+ * @c: char to verify
+ * Return: 0 or 1
+ */
+
+int	ft_isascii(int c)
+{
+	return (c >= 0 && c <= 127);
+}
