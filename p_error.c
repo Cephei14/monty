@@ -59,6 +59,12 @@ void p_error0(int i, char *str, char *token)
 {
 	switch (i)
 	{
+		case 7:
+		{
+			dprintf(STDERR_FILENO, "L%d: can't add, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
 		case 6:
 		{
 			dprintf(STDERR_FILENO, "L%d: can't swap, stack too short\n", data.line);

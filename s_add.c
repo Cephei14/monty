@@ -14,7 +14,7 @@ void s_add(mystack_t **head, unsigned int counter)
 	(void)counter;
 
 	if (top1->next == NULL)
-		p_error(7, NULL, NULL);
+		p_error0(7, NULL, NULL);
 	top2->n = top1->n + top2->n;
 	s_pop(head, 0);
 }
