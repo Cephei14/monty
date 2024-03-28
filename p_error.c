@@ -57,6 +57,18 @@ void p_error0(int i)
 {
 	switch (i)
 	{
+		case 9:
+		{
+			fprintf(stderr, "L%d: can't div, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
+		case 8:
+		{
+			fprintf(stderr, "L%d: can't sub, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
 		case 7:
 		{
 			fprintf(stderr, "L%d: can't add, stack too short\n", data.line);
