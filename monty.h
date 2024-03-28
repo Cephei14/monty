@@ -77,5 +77,6 @@ void s_mul(stack_t **head, unsigned int counter);
 void s_mod(stack_t **head, unsigned int counter);
 void s_pchar(stack_t **head, unsigned int counter);
 void s_pstr(stack_t **head, unsigned int counter);
+int ft_isascii(int c);
 
 #endif
