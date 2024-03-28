@@ -110,7 +110,7 @@ void p_error1(int i)
 		}
 		case 13:
 		{
-			fprintf(stderr, "\n");
+			fprintf(stderr, "L%d: can't pchar, stack empty\n", data.line);
 			exit(EXIT_FAILURE);
 			break;
 		}
