@@ -9,10 +9,11 @@
 
 void s_pop(stack_t **head, unsigned int counter)
 {
-	stack_t *current = (*head)->next;
+	stack_t *current;
 	(void)counter;
 	if (*head == NULL)
 		p_error0(5);
+	current = (*head)->next;
 	free(*head);
 	*head = current;
 }
