@@ -15,7 +15,7 @@ void s_swap(mystack_t **head, unsigned int counter)
 
 	(void)counter;
 	if (top1->next == NULL)
-		p_error0(6, NULL, NULL);
+		p_error0(6);
 	top1->n = top2->n;
 	top2->n = temp;
 }

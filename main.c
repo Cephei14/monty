@@ -6,8 +6,7 @@
  * @av: value of args
  * Return: nothing
  */
-
-void main(int ac, char **av)
+int main(int ac, char **av)
 {
 	if (ac != 2)
 		p_error(0, NULL, NULL);
@@ -16,4 +15,5 @@ void main(int ac, char **av)
 		p_error(1, av[1], NULL);
 	readfromfile();
 	fclose(data.mfile);
+	return (0);
 }

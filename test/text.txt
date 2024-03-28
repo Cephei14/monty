@@ -1,3 +1,0 @@
-pull 6
-push 4
-

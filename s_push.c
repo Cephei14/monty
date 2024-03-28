@@ -14,7 +14,7 @@ void s_push(mystack_t **head, unsigned int counter)
 
 	if (new_node == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: malloc failed");
+		fprintf(stderr, "Error: malloc failed");
 		exit(EXIT_FAILURE);
 	}
 	if (*head != NULL)

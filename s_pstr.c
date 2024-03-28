@@ -10,13 +10,13 @@
 void s_pstr(mystack_t **head, unsigned int counter)
 {
 	mystack_t *current = *head;
-	char c;
-	while (current->next)
+
+	(void)counter;
+	while (current)
 	{
-		c = current->n;
-		if (c == 0 || (c < 0 && c > 129))
-			return ;
-		printf("[%c]",c);
+		if (current->n > 127 || current->n <= 0)
+			return;
+		printf("[%c]", current->n);
 		current = current->next;
 	}
 }

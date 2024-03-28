@@ -15,5 +15,5 @@ void s_mul(mystack_t **head, unsigned int counter)
 	(void)counter;
 
 	top2->n = top2->n * top1->n;
-	s_pop(head,0);
+	s_pop(head, 0);
 }

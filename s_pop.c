@@ -12,7 +12,7 @@ void s_pop(mystack_t **head, unsigned int counter)
 	mystack_t *current = (*head)->next;
 	(void)counter;
 	if (*head == NULL)
-		p_error0(5, NULL, NULL);
+		p_error0(5);
 	free(*head);
 	*head = current;
 }
