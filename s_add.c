@@ -9,12 +9,14 @@
 
 void s_add(stack_t **head, unsigned int counter)
 {
-	stack_t *top1 = *head;
-	stack_t *top2 = top1->next;
+	stack_t *top1;
+	stack_t *top2;
 	(void)counter;
 
-	if (top1->next == NULL)
-		p_error0(7);
+	if (!*head || !(*head)->next)
+	    p_error0(7);
+	top1 = *head;
+	top2 = top1->next;
 	top2->n = top1->n + top2->n;
 	s_pop(head, 0);
 }
