@@ -91,3 +91,42 @@ void p_error0(int i)
 			break;
 	}
 }
+
+/**
+ * p_error1 - function that print an error code based on different case
+ * @i: case number
+ * Return: Nothing
+ */
+
+void p_error1(int i)
+{
+	switch (i)
+	{
+		case 13:
+		{
+			fprintf(stderr, "\n");
+			exit(EXIT_FAILURE);
+			break;
+		}
+		case 12:
+		{
+			fprintf(stderr, "L%d: can't pchar, value out of range\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
+		case 11:
+		{
+			fprintf(stderr, "L%d: can't mod, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
+		case 10:
+		{
+			fprintf(stderr, "L%d: can't mul, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
+		default:
+			break;
+	}
+}

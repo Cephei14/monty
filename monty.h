@@ -59,6 +59,7 @@ void readfromfile(void);
 void checkline(char *str, stack_t **head);
 void p_error(int i, char *str, char *token);
 void p_error0(int i);
+void p_error1(int i);
 int check_int(char *token);
 char *ft_strdup(const char *s1);
 void s_free(stack_t *head);
