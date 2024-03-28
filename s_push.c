@@ -1,18 +1,26 @@
 #include "monty.h"
 
-void s_push(stack_t **head, unsigned int counter)
-{
-    stack_t *new_node = (stack_t*)malloc(sizeof(stack_t));
-    if (new_node == NULL)
-    {
-        perror("Error allocating memory");
-        exit(EXIT_FAILURE);
-    }
+/**
+ * s_push - function that push new node to the stack
+ * @head: head of the stack
+ * @counter: not used parameter
+ * Return: nothing
+*/
 
-	new_node->prev = NULL;
-    new_node->n = data.n;
+void s_push(mystack_t **head, unsigned int counter)
+{
+	mystack_t *new_node = (mystack_t *)malloc(sizeof(mystack_t));
+	(void)counter;
+
+	if (new_node == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: malloc failed");
+		exit(EXIT_FAILURE);
+	}
+	if (*head != NULL)
+		(*head)->prev = new_node;
+	new_node->n = data.n;
 	new_node->next = *head;
-    if (*head != NULL)
-        (*head)->prev = new_node;
-    (*head) = new_node;
+	new_node->prev = NULL;
+	(*head) = new_node;
 }
