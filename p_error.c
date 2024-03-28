@@ -102,6 +102,12 @@ void p_error1(int i)
 {
 	switch (i)
 	{
+		case 14:
+		{
+			fprintf(stderr, "\n");
+			exit(EXIT_FAILURE);
+			break;
+		}
 		case 13:
 		{
 			fprintf(stderr, "\n");
@@ -123,6 +129,27 @@ void p_error1(int i)
 		case 10:
 		{
 			fprintf(stderr, "L%d: can't mul, stack too short\n", data.line);
+			exit(EXIT_FAILURE);
+			break;
+		}
+		default:
+			break;
+	}
+}
+
+/**
+ * p_error2 - function that print an error code based on different case
+ * @i: case number
+ * Return: Nothing
+ */
+
+void p_error2(int i)
+{
+	switch (i)
+	{
+		case 15:
+		{
+			fprintf(stderr, "L%d: division by zero\n", data.line);
 			exit(EXIT_FAILURE);
 			break;
 		}
