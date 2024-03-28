@@ -57,6 +57,7 @@ extern info_t data;
 void readfromfile(void);
 void checkline(char *str,mystack_t **head);
 void p_error(int i, char *str, char *token);
+void p_error0(int i, char *str, char *token);
 int check_int(char *token);
 void s_push(mystack_t **head, unsigned int counter);
 void s_pall(mystack_t **head, unsigned int counter);
@@ -65,5 +66,11 @@ void s_pop(mystack_t **head, unsigned int counter);
 void s_swap(mystack_t **head, unsigned int counter);
 void s_add(mystack_t **head, unsigned int counter);
 void s_nop(mystack_t **head, unsigned int counter);
+void s_sub(mystack_t **head, unsigned int counter);
+void s_div(mystack_t **head, unsigned int counter);
+void s_mul(mystack_t **head, unsigned int counter);
+void s_mod(mystack_t **head, unsigned int counter);
+void s_pchar(mystack_t **head, unsigned int counter);
+void s_pstr(mystack_t **head, unsigned int counter);
 
 #endif
