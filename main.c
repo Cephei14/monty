@@ -1,11 +1,14 @@
 #include "monty.h"
 
+
+info_t data = {0, NULL, NULL};
 /**
  * main - main function
  * @ac: number of args
  * @av: value of args
  * Return: nothing
  */
+
 int main(int ac, char **av)
 {
 	if (ac != 2)

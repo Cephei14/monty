@@ -8,8 +8,6 @@
  * Return: Nothing
  */
 
-info_t data;
-
 void checkline(char *str, mystack_t **head)
 {
 	char *token = NULL;

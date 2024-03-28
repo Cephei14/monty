@@ -18,9 +18,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } mystack_t;
 
 /**
@@ -33,12 +33,13 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(mystack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(mystack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
  * struct info_s - struct that contain informations about the monty file
+ * @n: data to be stored in the stack
  * @line: the strings of each line inside the monty file
  * @mfile: File descriptor of the monty file
  * Description: this structure is made to help handling the insturctions
@@ -47,7 +48,7 @@ typedef struct instruction_s
 
 typedef struct info_s
 {
-        int n;
+	int n;
 	int line;
 	FILE *mfile;
 }  info_t;
@@ -55,7 +56,7 @@ typedef struct info_s
 extern info_t data;
 
 void readfromfile(void);
-void checkline(char *str,mystack_t **head);
+void checkline(char *str, mystack_t **head);
 void p_error(int i, char *str, char *token);
 void p_error0(int i);
 int check_int(char *token);
