@@ -16,7 +16,7 @@ void s_pchar(stack_t **head, unsigned int counter)
 	c = *head;
 	if (!c)
 		p_error1(12);
-	if (c->n > 127 || c->n < 0)
+	if (c->n <= 127 && c->n >= 0)
 		printf("%c\n", c->n);
 	else
 		p_error1(13);
