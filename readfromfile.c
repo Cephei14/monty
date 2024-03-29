@@ -10,19 +10,12 @@ void readfromfile(void)
 	stack_t *head = NULL;
 	char *oneline = NULL;
 	char str[1024];
-	int i;
 
 	data.line = 1;
-	i = 0;
 	while (fgets(str, sizeof(str), data.mfile) != NULL)
 	{
 		oneline = ft_strdup(str);
-		while (oneline[i] != '\0' && oneline[i] != '\t' && oneline[i] != ' ')
-		{
-			if (oneline[i] != '#')
-				checkline(oneline, &head);
-			i++;
-		}
+		checkline(oneline, &head);
 		free(oneline);
 		data.line++;
 	}
