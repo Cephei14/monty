@@ -1,7 +1,7 @@
 #include "monty.h"
 
 
-info_t data = {0, 0, NULL};
+info_t data = {0, 0, NULL, NULL};
 /**
  * main - main function
  * @ac: number of args

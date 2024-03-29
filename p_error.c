@@ -111,12 +111,16 @@ void p_error1(int i)
 		case 13:
 		{
 			fprintf(stderr, "L%d: can't pchar, stack empty\n", data.line);
+			free(data.oneline);
+			fclose(data.mfile);
 			exit(EXIT_FAILURE);
 			break;
 		}
 		case 12:
 		{
 			fprintf(stderr, "L%d: can't pchar, value out of range\n", data.line);
+			free(data.oneline);
+			fclose(data.mfile);
 			exit(EXIT_FAILURE);
 			break;
 		}

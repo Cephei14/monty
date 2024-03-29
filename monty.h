@@ -51,6 +51,7 @@ typedef struct info_s
 	int n;
 	int line;
 	FILE *mfile;
+	char *oneline;
 }  info_t;
 
 extern info_t data;

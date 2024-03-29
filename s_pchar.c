@@ -10,14 +10,19 @@
 
 void s_pchar(stack_t **head, unsigned int counter)
 {
-	stack_t *c;
+	stack_t *h;
 
 	(void)counter;
-	c = *head;
-	if (!c)
-		p_error1(12);
-	if (c->n <= 127 && c->n >= 0)
-		printf("%c\n", c->n);
-	else
+	h = *head;
+	if (!h)
+	{
+		free(*head);
 		p_error1(13);
+	}
+	if (h->n > 127 || h->n < 0)
+	{
+		free(*head);
+		p_error1(12);
+	}
+	printf("%c\n", h->n);
 }

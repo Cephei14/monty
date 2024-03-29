@@ -15,6 +15,7 @@ void readfromfile(void)
 	while (fgets(str, sizeof(str), data.mfile) != NULL)
 	{
 		oneline = ft_strdup(str);
+		data.oneline = oneline;
 		checkline(oneline, &head);
 		free(oneline);
 		data.line++;
