@@ -14,7 +14,7 @@ void s_add(stack_t **head, unsigned int counter)
 	(void)counter;
 
 	if (!*head || !(*head)->next)
-	    p_error0(7);
+		p_error0(7);
 	top1 = *head;
 	top2 = top1->next;
 	top2->n = top1->n + top2->n;
