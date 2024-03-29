@@ -42,6 +42,7 @@ typedef struct instruction_s
  * @n: data to be stored in the stack
  * @line: the strings of each line inside the monty file
  * @mfile: File descriptor of the monty file
+ * @oneline: a line from the monty file
  * Description: this structure is made to help handling the insturctions
  * inside the monty file
 */
