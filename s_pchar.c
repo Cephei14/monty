@@ -10,14 +10,14 @@
 
 void s_pchar(stack_t **head, unsigned int counter)
 {
-	char c;
+	stack_t *c;
 
 	(void)counter;
-	if(!*head)
+	c = *head;
+	if (!c)
 		p_error1(12);
-	c = (*head)->n;
-	if (isascii(c))
-		printf("%c\n", c);
+	if (c->n > 127 || c->n < 0)
+		printf("%c\n", c->n);
 	else
 		p_error1(13);
 }
