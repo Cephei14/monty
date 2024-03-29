@@ -16,12 +16,12 @@ void s_pchar(stack_t **head, unsigned int counter)
 	h = *head;
 	if (!h)
 	{
-		free(*head);
+		s_free(*head);
 		p_error1(13);
 	}
 	if (h->n > 127 || h->n < 0)
 	{
-		free(*head);
+		s_free(*head);
 		p_error1(12);
 	}
 	printf("%c\n", h->n);
